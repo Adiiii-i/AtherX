@@ -10,31 +10,22 @@ import store from './store.js';
 const app = express();
 const httpServer = createServer(app);
 
-const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
-  .split(',')
-  .map((s) => s.trim().replace(/\/$/, ''));
-
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.warn(`[cors] Blocked request from origin: ${origin}`);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: true, // Reflect request origin (Allows everything)
   methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'Cache-Control', 'Pragma'],
   credentials: true,
   optionsSuccessStatus: 200,
 };
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Handle preflight for all routes explicitly
 
 const io = new Server(httpServer, {
   cors: corsOptions,
   maxHttpBufferSize: 1e5, // 100 KB max WebSocket payload
 });
 
-app.use(cors(corsOptions));
 app.use(express.json({ limit: '10kb' }));
 app.set('trust proxy', 1);
 
