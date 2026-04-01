@@ -114,7 +114,7 @@ export default function Home() {
             <div className="hero-ring" />
           </div>
           <h1 className="mb-2 text-4xl font-extrabold tracking-tight">
-            <span className="gradient-text">Whisper</span>
+            <span className="gradient-text">AtherX</span>
           </h1>
           <p className="text-sm font-medium text-sand-600/70 tracking-wide uppercase">
             Ephemeral Encrypted Chat

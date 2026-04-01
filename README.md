@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/lock.svg" width="80" alt="Lock logo" />
-  <h1>NullRoom (Currently "Whisper")</h1>
-  <p><strong>A beautifully aesthetic, zero-knowledge ephemeral chat application.</strong></p>
+  <h1>AtherX</h1>
+  <p><strong>A beautifully aesthetic, zero-knowledge ephemeral chat application with a premium burgundy & gold theme.</strong></p>
 
   <p>
     <a href="#features">Features</a> •
@@ -24,7 +24,7 @@ Your encryption keys are generated entirely in the browser and pass directly bet
 - **True E2E Encryption:** Messages are encrypted locally on your device via the `Web Crypto API` (AES-256-GCM).
 - **Self-Destructing Rooms:** Choose your own TTL (Time-to-Live): 5 min, 15 min, 1 hr, or 24 hours. When the timer hits zero—or when both users disconnect—the room is permanently nuked from memory.
 - **Zero-Knowledge Architecture:** Backend logging is disabled. The server relays raw `ArrayBuffers` of ciphertext without the capacity to read them.
-- **Premium Dark UI:** Designed using Tailwind CSS with a stunning "mocha brown & beige" glassmorphic aesthetic. Includes animated glowing borders, particle backgrounds, and deep shadows.
+- **Premium Dark UI:** Designed using Tailwind CSS with a stunning "DEEP BURGUNDY & GOLDEN SAND" theme. Includes animated glowing borders, particle backgrounds, and deep shadows.
 - **Message Read Receipts:** Real-time dual-check indicators (✓✓) synced over WebSockets.
 - **Typing Indicators:** Animated bubble when the peer is writing a message.
 - **Burn After Reading:** Messages visually self-destruct with a blur/fade animation 10 seconds after they are read.
