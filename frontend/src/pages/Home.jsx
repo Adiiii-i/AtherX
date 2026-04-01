@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+// Trigger Build: Rebranding to AtherX with Deep Burgundy theme
 import { useNavigate } from 'react-router-dom';
 import {
   Shield, Lock, Zap, Timer, ArrowRight,
