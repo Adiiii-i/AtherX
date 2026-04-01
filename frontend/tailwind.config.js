@@ -9,18 +9,44 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       colors: {
+        burgundy: {
+          50: '#fdf2f2',
+          100: '#fbe4e4',
+          200: '#f7cdcd',
+          300: '#f1a9a9',
+          400: '#e57777',
+          500: '#d14d4d',
+          600: '#b23535',
+          700: '#942929',
+          800: '#7a2525',
+          900: '#5B0E14', // DEEP BURGUNDY
+          950: '#3a080c',
+        },
+        sand: {
+          50: '#fefdf6',
+          100: '#fdfae9',
+          200: '#fbf4d2',
+          300: '#f7ebad',
+          400: '#f1e194', // GOLDEN SAND
+          500: '#e7cf6e',
+          600: '#d5b64c',
+          700: '#b4933a',
+          800: '#947633',
+          900: '#7a612d',
+          950: '#463618',
+        },
         surface: {
-          50: '#f9f8f6',
-          100: '#f5f5dc', // Beige
-          200: '#e5e0d3',
-          700: '#755441',
-          800: '#5c4033', // Dark Brown
-          900: '#462e24',
-          950: '#332018', // Deepest Brown
+          50: '#fefdf6',
+          100: '#f1e194', // Golden Sand
+          200: '#e7cf6e',
+          700: '#7a2525',
+          800: '#5B0E14', // Deep Burgundy
+          900: '#3a080c',
+          950: '#1a0406',
         },
         accent: {
-          beige: '#f5f5dc',
-          brown: '#5c4033',
+          sand: '#f1e194',
+          burgundy: '#5b0e14',
         },
       },
       animation: {

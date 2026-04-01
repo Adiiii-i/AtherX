@@ -7,11 +7,11 @@ import { useMemo } from 'react';
 export default function Particles({ count = 60 }) {
   const particles = useMemo(() => {
     const colors = [
-      'rgba(245, 245, 220,',  // amber
-      'rgba(229, 209, 168,',   // orange
-      'rgba(234, 179, 8,',  // yellow
-      'rgba(59, 130, 246,',  // blue
-      'rgba(229, 209, 168,',  // orange
+      'rgba(241, 225, 148,', // sand
+      'rgba(231, 207, 110,',  // light sand
+      'rgba(180, 147, 58,',   // dark sand
+      'rgba(91, 14, 20,',    // burgundy
+      'rgba(148, 41, 41,',    // light burgundy
     ];
     return Array.from({ length: count }, (_, i) => ({
       id: i,
@@ -46,9 +46,9 @@ export default function Particles({ count = 60 }) {
       ))}
 
       {/* Large ambient orbs for depth */}
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-stone-500/[0.07] blur-[100px] animate-float" />
-      <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-orange-500/[0.05] blur-[80px] animate-float" style={{ animationDelay: '-4s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-yellow-600/[0.04] blur-[120px] animate-pulse-glow" />
+      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-burgundy-900/[0.12] blur-[100px] animate-float" />
+      <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-sand-400/[0.08] blur-[80px] animate-float" style={{ animationDelay: '-4s' }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-burgundy-950/[0.06] blur-[120px] animate-pulse-glow" />
     </div>
   );
 }

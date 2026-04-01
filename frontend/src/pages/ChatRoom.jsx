@@ -277,9 +277,9 @@ export default function ChatRoom() {
     return (
       <div className="relative flex min-h-dvh flex-col items-center justify-center px-4">
         <div className="relative z-10 glass rounded-2xl p-8 max-w-sm w-full text-center animate-scale-in">
-          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-stone-200" />
-          <h2 className="mb-2 text-xl font-bold text-slate-100">Can't Join Room</h2>
-          <p className="mb-6 text-sm text-slate-400">{error}</p>
+          <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-sand-400" />
+          <h2 className="mb-2 text-xl font-bold text-sand-100">Can't Join Room</h2>
+          <p className="mb-6 text-sm text-sand-700/60">{error}</p>
           <button onClick={() => navigate('/')} className="btn-primary w-full" id="go-home-btn">
             <ArrowLeft className="mr-2 inline h-4 w-4" />
             Back to Home
@@ -290,7 +290,7 @@ export default function ChatRoom() {
   }
 
   return (
-    <div className="relative flex h-dvh flex-col bg-surface-950">
+    <div className="relative flex h-dvh flex-col bg-burgundy-950">
       {/* ── Top Bar ──────────────────────────────────────── */}
       <header className="glass-light sticky top-0 z-20 flex items-center justify-between gap-3 px-4 py-3">
         <div className="flex items-center gap-3">
@@ -306,13 +306,13 @@ export default function ChatRoom() {
                 {copied ? <Check className="h-3.5 w-3.5 text-stone-200" /> : <Copy className="h-3.5 w-3.5" />}
               </button>
             </div>
-            <div className="flex items-center gap-2 text-xs text-slate-500">
+            <div className="flex items-center gap-2 text-xs text-sand-700/60">
               {connected ? (
-                <span className="flex items-center gap-1 text-stone-200">
+                <span className="flex items-center gap-1 text-sand-400 font-medium">
                   <Wifi className="h-3 w-3" /> Connected
                 </span>
               ) : (
-                <span className="flex items-center gap-1 text-stone-200">
+                <span className="flex items-center gap-1 text-red-400 font-medium">
                   <WifiOff className="h-3 w-3" /> Reconnecting…
                 </span>
               )}
@@ -338,7 +338,7 @@ export default function ChatRoom() {
           {/* Privacy mode toggle */}
           <button
             onClick={() => setPrivacyMode(!privacyMode)}
-            className={`rounded-lg p-1.5 transition-colors ${privacyMode ? 'bg-stone-500/20 text-stone-200' : 'text-slate-600 hover:text-slate-400'}`}
+            className={`rounded-lg p-1.5 transition-colors ${privacyMode ? 'bg-burgundy-500/20 text-sand-400' : 'text-sand-700/60 hover:text-sand-400'}`}
             title="Privacy mode (blur when tab inactive)"
             id="privacy-mode-btn"
           >
@@ -359,7 +359,7 @@ export default function ChatRoom() {
 
       {/* ── No encryption key warning ────────────────────── */}
       {!hasKey && (
-        <div className="mx-4 mt-2 flex items-center gap-2 rounded-lg bg-amber-500/10 border border-stone-400/20 px-3 py-2 text-xs text-stone-300 animate-slide-down">
+        <div className="mx-4 mt-2 flex items-center gap-2 rounded-lg bg-burgundy-500/10 border border-sand-400/20 px-3 py-2 text-xs text-sand-400 animate-slide-down">
           <AlertTriangle className="h-3.5 w-3.5 flex-shrink-0" />
           No encryption key found. Ask your contact to share the secure link for E2E encryption.
         </div>
@@ -381,7 +381,7 @@ export default function ChatRoom() {
         {messages.map((msg) =>
           msg.type === 'system' ? (
             <div key={msg.id} className="flex justify-center py-2 animate-fade-in">
-              <span className="rounded-full bg-surface-800/60 px-4 py-1.5 text-[11px] text-slate-500 font-medium">
+              <span className="rounded-full bg-burgundy-800/40 px-4 py-1.5 text-[11px] text-sand-700/70 font-medium border border-sand-400/10">
                 {msg.text}
               </span>
             </div>
@@ -435,7 +435,7 @@ export default function ChatRoom() {
           <button
             onClick={sendMessage}
             disabled={!input.trim()}
-            className="mb-1 rounded-xl bg-stone-500 p-2.5 text-white transition-all duration-200 hover:bg-amber-500 disabled:opacity-30 disabled:hover:bg-stone-500"
+            className="mb-1 rounded-xl bg-sand-400 p-2.5 text-burgundy-950 transition-all duration-200 hover:bg-sand-500 disabled:opacity-30 disabled:hover:bg-sand-400"
             id="send-btn"
           >
             <Send className="h-5 w-5" />

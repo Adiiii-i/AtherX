@@ -109,17 +109,17 @@ export default function Home() {
         
         {/* ── Hero ──────────────────────────────────────── */}
         <div className="mb-10 text-center animate-fade-in">
-          <div className="mb-8 inline-flex relative z-10 items-center justify-center rounded-3xl bg-surface-900 border border-stone-400/20 p-5 shadow-2xl hero-glow">
-            <Lock className="h-8 w-8 text-stone-200 drop-shadow-[0_0_10px_rgba(139,92,246,0.6)]" />
+          <div className="mb-8 inline-flex relative z-10 items-center justify-center rounded-3xl bg-burgundy-900/40 border border-sand-400/20 p-5 shadow-2xl hero-glow">
+            <Lock className="h-8 w-8 text-sand-400 drop-shadow-[0_0_10px_rgba(241,225,148,0.4)]" />
             <div className="hero-ring" />
           </div>
           <h1 className="mb-2 text-4xl font-extrabold tracking-tight">
             <span className="gradient-text">Whisper</span>
           </h1>
-          <p className="text-sm font-medium text-slate-400 tracking-wide uppercase">
+          <p className="text-sm font-medium text-sand-600/70 tracking-wide uppercase">
             Ephemeral Encrypted Chat
           </p>
-          <p className="mt-3 text-slate-500 text-sm leading-relaxed max-w-xs mx-auto">
+          <p className="mt-3 text-sand-900/50 text-sm leading-relaxed max-w-xs mx-auto">
             Your messages vanish into thin air. No accounts. No tracking. No traces.
           </p>
         </div>
@@ -135,11 +135,11 @@ export default function Home() {
             </div>
 
             {/* Room code display */}
-            <div className="mb-4 rounded-xl bg-surface-950/80 py-4 text-center">
-              <p className="mb-1 text-xs font-medium uppercase tracking-wider text-slate-500">
+            <div className="mb-4 rounded-xl bg-burgundy-950/40 py-4 text-center border border-sand-400/10">
+              <p className="mb-1 text-xs font-medium uppercase tracking-wider text-sand-700/60">
                 Room Code
               </p>
-              <p className="font-mono text-3xl font-bold tracking-widest text-stone-200">
+              <p className="font-mono text-3xl font-bold tracking-widest text-sand-400">
                 {createdRoom.roomId}
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function Home() {
                   className="btn-secondary flex items-center gap-1.5 px-4 text-sm"
                   id="copy-link-btn"
                 >
-                  {copied ? <Check className="h-4 w-4 text-stone-200" /> : <Copy className="h-4 w-4" />}
+                  {copied ? <Check className="h-4 w-4 text-sand-400" /> : <Copy className="h-4 w-4" />}
                   {copied ? 'Copied' : 'Copy'}
                 </button>
               </div>
@@ -221,8 +221,8 @@ export default function Home() {
                     onClick={() => setTtl(opt.value)}
                     className={`rounded-lg py-2.5 px-2 text-center transition-all duration-200 ${
                       ttl === opt.value
-                        ? 'bg-stone-500/20 ring-1 ring-stone-400/50 text-stone-300'
-                        : 'bg-surface-900/60 text-slate-500 hover:bg-surface-800 hover:text-slate-400'
+                        ? 'bg-sand-400/20 ring-1 ring-sand-400/50 text-sand-400'
+                        : 'bg-burgundy-900/20 text-sand-700/60 hover:bg-burgundy-900/40 hover:text-sand-600'
                     }`}
                     id={`ttl-${opt.value}`}
                   >
