@@ -38,7 +38,7 @@ setInterval(() => {
 
 /* ── Routes ──────────────────────────────────────────────── */
 
-const ALLOWED_TTLS = [300, 1800, 86400]; // 5 min, 30 min, 24 h
+const ALLOWED_TTLS = [300, 900, 1800, 3600, 43200, 86400]; // 5 min, 15 min, 30 min, 1 hr, 12 h, 24 h
 
 router.post('/room', rateLimit, async (req, res) => {
   try {

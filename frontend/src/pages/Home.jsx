@@ -12,10 +12,12 @@ import SecurityModal from '../components/SecurityModal';
 const API_URL = import.meta.env.VITE_API_URL || '';
 
 const TTL_OPTIONS = [
-  { value: 300,   label: '5 min',  desc: 'Quick chat' },
-  { value: 900,   label: '15 min', desc: 'Brief talk' },
-  { value: 3600,  label: '1 hr',   desc: 'Standard' },
-  { value: 86400, label: '24 hrs', desc: 'Extended' },
+  { value: 300,   label: '5 min',  desc: 'Quick' },
+  { value: 900,   label: '15 min', desc: 'Short' },
+  { value: 1800,  label: '30 min', desc: 'Standard' },
+  { value: 3600,  label: '1 hr',   desc: 'Discussion' },
+  { value: 43200, label: '12 hrs', desc: 'Extended' },
+  { value: 86400, label: '24 hrs', desc: 'Perpetual' },
 ];
 
 export default function Home() {
